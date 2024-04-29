@@ -3,7 +3,7 @@ using UnityEngine;
 public class PingPong : MonoBehaviour
 {
     public Vector3 direction = new(1.0f, 0.0f, 0.0f);
-    public float speed = 1.0f;
+    public float speed = 15.0f;
 
     void Start()
     {
