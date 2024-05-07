@@ -4,26 +4,29 @@ public class PingPong : MonoBehaviour
 {
     public Vector3 direction = new(1.0f, 0.0f, 0.0f);
     public float speed = 15.0f;
+    private Vector3 startPosition = new Vector3(-10.0f, 0.0f, 0.0f);
+    private float xSize = 10.0f;
 
     void Start()
     {
-        transform.localPosition = new(-10.0f, 0.0f, 0.0f);
+        transform.localPosition = startPosition;
     }
 
     void Update()
     {
-        if (transform.position.x >= 10.0f)
+        if (transform.position.x >= xSize)
         {
-            transform.localPosition = new(10.0f, 0.0f, 0.0f);
+            transform.localPosition = -startPosition;
             direction = -direction;
         }
-        else if (transform.position.x <= -10.0f)
+        else if (transform.position.x <= -xSize)
         {
-            transform.localPosition = new(-10.0f, 0.0f, 0.0f);
+            transform.localPosition = startPosition;
             direction = -direction;
         }
 
-        direction.y = transform.position.x * transform.position.x / 100.0f;
+        float parabolaTrajectory = transform.position.x * transform.position.x / 100.0f;
+        direction.y = parabolaTrajectory;
 
         if (direction.x > 0 && transform.position.x > 0 || direction.x < 0 && transform.position.x < 0)
         {

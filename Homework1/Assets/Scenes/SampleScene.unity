@@ -324,9 +324,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab:
   - {fileID: 5700748309920541878, guid: 9858a4fcfff58f8469b45853f3c14430, type: 3}
-  - {fileID: 4365715284529316861, guid: 493f8ea0682300b4a935830f23a73b79, type: 3}
   - {fileID: 7688966700003780176, guid: c6977f5f1df746745992286ad9cc05b5, type: 3}
   - {fileID: 4658170726639574954, guid: ca533d0be67d27a4ebfb44591c591ec5, type: 3}
+  - {fileID: 4365715284529316861, guid: 493f8ea0682300b4a935830f23a73b79, type: 3}
 --- !u!1 &2006071706
 GameObject:
   m_ObjectHideFlags: 0

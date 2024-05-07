@@ -4,6 +4,7 @@ public class SpawnPrefabs : MonoBehaviour
 {
     public GameObject[] prefab;
     private GameObject instatnce;
+    private Vector3 startPosition = new(0.0f, 0.0f, 0.0f);
 
     void Update()
     {
@@ -21,7 +22,7 @@ public class SpawnPrefabs : MonoBehaviour
             }
 
             var rotation = Quaternion.identity;
-            var position = new Vector3(0.0f, 0.0f, 0.0f);
+            var position = startPosition;
 
             instatnce = Instantiate(prefab[Random.Range(0, prefab.Length)], position, rotation);
         }

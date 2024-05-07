@@ -11,8 +11,12 @@ public class Teleport : MonoBehaviour
 
         if (time >= timeOut)
         {
+            newPosition();
             time = 0;
-            transform.localPosition = new Vector3(Random.Range(-5.0f, 5.0f), Random.Range(0.0f, 10.0f), Random.Range(-5.0f, 5.0f));
         }
+    }
+    void newPosition()
+    {
+        transform.localPosition = new Vector3(Random.Range(-5.0f, 5.0f), Random.Range(0.0f, 10.0f), Random.Range(-5.0f, 5.0f));
     }
 }
